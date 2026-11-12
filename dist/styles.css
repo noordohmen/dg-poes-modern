@@ -186,7 +186,7 @@ em { color: var(--blue); font-family: Georgia, 'Times New Roman', serif; font-we
 .members-footer p { max-width: 600px; line-height: 1.6; }
 
 .atmosphere { background: var(--white); }
-.atmosphere.section-pad { padding-top: .5cm; padding-bottom: max(3rem, calc(clamp(6rem, 11vw, 10rem) - 2cm)); }
+.atmosphere.section-pad { padding-block: .5cm; }
 .atmosphere > .section-kicker { margin-bottom: clamp(2rem, 4vw, 3rem); }
 .atmosphere-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: minmax(280px, 32vw); gap: .8rem; }
 .atmosphere-card { position: relative; margin: 0; overflow: hidden; border-radius: var(--radius); background: #d8d4cb; }
@@ -200,7 +200,7 @@ em { color: var(--blue); font-family: Georgia, 'Times New Roman', serif; font-we
 
 .activities { background: var(--white); }
 .activities.section-pad { padding-block: .5cm; }
-.activity-story { max-width: 1100px; display: grid; grid-template-columns: minmax(260px, .8fr) 1.2fr; gap: clamp(1.5rem, 3vw, 3rem); align-items: center; margin-bottom: clamp(1.5rem, 2.5vw, 2.5rem); padding: clamp(1.25rem, 2.5vw, 2rem); border-radius: var(--radius); background: var(--paper); }
+.activity-story { width: 100%; max-width: none; display: grid; grid-template-columns: minmax(260px, .8fr) 1.2fr; gap: clamp(1.5rem, 3vw, 3rem); align-items: center; margin-bottom: clamp(1.5rem, 2.5vw, 2.5rem); padding: clamp(1.25rem, 2.5vw, 2rem); border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); }
 .activity-story img { width: 100%; aspect-ratio: 1.15; object-fit: cover; object-position: center 65%; border-radius: var(--radius); }
 .activity-story h3, .activity-card h3, .alumni-list h3, .memory-card h3 { margin: 0 0 1.2rem; font-size: clamp(2rem, 4vw, 4rem); line-height: .95; letter-spacing: -.05em; text-transform: uppercase; }
 .activity-story p { margin-bottom: 0; line-height: 1.55; }
@@ -216,7 +216,7 @@ em { color: var(--blue); font-family: Georgia, 'Times New Roman', serif; font-we
 .alumni-list h3 { column-span: all; color: var(--pink); }
 .alumni-list p { break-inside: avoid; margin: 0 0 .9rem; line-height: 1.6; }
 
-.memories { background: var(--white); }
+.memories.section-pad { padding-top: .5cm; background: var(--white); }
 .memories .section-heading { grid-template-columns: .45fr 1.55fr; }
 .memory-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 3vw, 2.5rem); align-items: stretch; }
 .memory-card { height: 100%; padding: clamp(1.6rem, 3.5vw, 3.5rem); border-radius: var(--radius); background: var(--paper); }
