@@ -304,6 +304,7 @@ em { color: var(--blue); font-family: Georgia, 'Times New Roman', serif; font-we
 
 @media (max-width: 640px) {
   :root { --pad: 1.1rem; }
+  main, main > section { width: 100%; max-width: 100%; }
   .brand-copy small { display: none; }
   .hero { min-height: auto; padding-top: 105px; padding-bottom: 6rem; }
   .hero-full { padding-top: 72px; padding-bottom: 0; }
@@ -325,7 +326,8 @@ em { color: var(--blue); font-family: Georgia, 'Times New Roman', serif; font-we
   .facts { grid-template-columns: 1fr; }
   .fact { min-height: 90px; padding: 1rem 1.1rem; border-right: 0; border-bottom: 1px solid var(--ink); }
   .fact:last-child { border-bottom: 0; }
-  .section-heading, .section-heading-row { grid-template-columns: 1fr; gap: 2rem; }
+  .section-heading, .section-heading-row { width: 100%; max-width: 100%; grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .section-heading > *, .section-heading-row > * { min-width: 0; }
   .section-heading > p { max-width: 420px; }
   .feature-image { min-height: 115vw; }
   .feature-copy { padding-block: 3.2rem; }
@@ -337,8 +339,10 @@ em { color: var(--blue); font-family: Georgia, 'Times New Roman', serif; font-we
   .members-hero { height: max(300px, calc(105vw - 2cm)); }
   .members-photo-title { right: 1rem; bottom: 1.25rem; left: 1rem; font-size: clamp(3rem, 16vw, 5rem); }
   .lustrums .section-heading h2 { font-size: clamp(2.6rem, 12vw, 4rem); }
+  .alumni .section-heading h2 { font-size: clamp(2.6rem, 12vw, 3.6rem); overflow-wrap: anywhere; }
+  .memories .section-heading h2 { font-size: clamp(2.4rem, 11vw, 3.4rem); overflow-wrap: anywhere; }
   .activities .section-heading h2 { font-size: clamp(2.2rem, 9vw, 3rem); }
-  .alumni .section-heading, .memories .section-heading { grid-template-columns: 1fr; }
+  .alumni .section-heading, .memories .section-heading { grid-template-columns: minmax(0, 1fr); }
   .alumni-list { columns: 1; }
   .lustrum-grid { grid-template-columns: 1fr; }
   .lustrum-card:nth-child(3) { grid-column: auto; }
