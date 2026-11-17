@@ -223,7 +223,7 @@ em { color: var(--blue); font-family: Georgia, 'Times New Roman', serif; font-we
 .activity-card h3, .alumni-list h3, .memory-card h3 { margin: 0 0 1.2rem; font-size: clamp(2rem, 4vw, 4rem); line-height: .95; letter-spacing: -.05em; text-transform: uppercase; }
 .activity-card p { line-height: 1.75; }
 .activity-card { display: grid; grid-template-columns: minmax(280px, .85fr) 1.15fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; margin-top: 1.2rem; padding: clamp(1.2rem, 2.5vw, 2.5rem); overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); }
-.activity-card img { width: 100%; aspect-ratio: 1.1; object-fit: cover; border-radius: var(--radius); }
+.activity-card img { width: 100%; height: clamp(320px, 32vw, 460px); object-fit: cover; border-radius: var(--radius); }
 .activity-card p { margin-bottom: 0; }
 .activity-card-featured img { object-position: center 65%; }
 .activities > .activity-card:nth-of-type(even) img { order: 2; }
@@ -234,10 +234,10 @@ em { color: var(--blue); font-family: Georgia, 'Times New Roman', serif; font-we
 .alumni .section-kicker span { color: var(--ink); background: white; }
 .alumni .section-heading > div:last-child { font-size: 1rem; font-weight: 700; line-height: 1.55; letter-spacing: .08em; }
 .alumni .section-heading > div:last-child p { margin: 0 0 .7rem; }
-.alumni-body { display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(280px, .82fr); gap: clamp(1rem, 3vw, 2.5rem); align-items: start; padding: clamp(1.5rem, 3vw, 3rem); border: 2px solid var(--blue); border-radius: var(--radius); color: var(--ink); background: var(--paper); }
-.alumni-photo { grid-column: 2; grid-row: 1; margin: 0; overflow: hidden; border-radius: var(--radius); background: var(--paper); }
-.alumni-photo img { width: 100%; height: auto; margin-block: -.5cm; clip-path: inset(.5cm 0); }
-.alumni-list { grid-column: 1; grid-row: 1; columns: 2; column-gap: clamp(1.5rem, 4vw, 4rem); min-width: 0; }
+.alumni-body { display: grid; grid-template-columns: 1fr; gap: clamp(1rem, 3vw, 2.5rem); align-items: start; padding: clamp(1.5rem, 3vw, 3rem); border: 2px solid var(--blue); border-radius: var(--radius); color: var(--ink); background: var(--paper); }
+.alumni-photo { height: clamp(230px, 25vw, 360px); margin: 0; overflow: hidden; border: 2px solid var(--blue); border-radius: var(--radius); background: var(--paper); }
+.alumni-photo img { width: 100%; height: calc(100% + 1cm); object-fit: cover; object-position: center; transform: translateY(-.5cm); }
+.alumni-list { columns: 2; column-gap: clamp(1.5rem, 4vw, 4rem); min-width: 0; }
 .alumni-list h3 { column-span: all; color: var(--ink); font-size: clamp(.68rem, 1.55vw, 2rem); letter-spacing: -.03em; white-space: nowrap; }
 .alumni-list p { break-inside: avoid; margin: 0 0 .9rem; line-height: 1.6; }
 
@@ -322,6 +322,7 @@ em { color: var(--blue); font-family: Georgia, 'Times New Roman', serif; font-we
   .board-layout { grid-template-columns: 1fr; }
   .board-photo { height: auto; min-height: 0; }
   .activity-card { grid-template-columns: 1fr; }
+  .activity-card img { height: min(105vw, 440px); }
   .activities > .activity-card:nth-of-type(even) img { order: 0; }
   .cohort-layout { grid-template-columns: minmax(240px, .72fr) 1.3fr; }
   .member-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -374,8 +375,7 @@ em { color: var(--blue); font-family: Georgia, 'Times New Roman', serif; font-we
   .activities .section-heading h2 { font-size: clamp(2.2rem, 9vw, 3rem); }
   .alumni .section-heading, .memories .section-heading { grid-template-columns: minmax(0, 1fr); }
   .alumni-body { grid-template-columns: 1fr; }
-  .alumni-photo { grid-column: 1; grid-row: 1; display: block; visibility: visible; }
-  .alumni-list { grid-column: 1; grid-row: 2; }
+  .alumni-photo { display: block !important; height: min(62vw, 250px); visibility: visible !important; opacity: 1 !important; transform: none !important; }
   .alumni-list { columns: 1; }
   .lustrum-grid { grid-template-columns: 1fr; }
   .lustrum-card-with-image { grid-template-columns: 1fr; }
@@ -389,11 +389,12 @@ em { color: var(--blue); font-family: Georgia, 'Times New Roman', serif; font-we
   .cohorts { width: 100%; }
   .cohort-photo { aspect-ratio: 1.1; }
   .cohort-photo-crop-top-2021 { aspect-ratio: 1.16; }
-  .cohort-photo-shift-mobile img { object-position: center 28%; transform: none; }
-  .cohort-photo-shift-mobile-2025 img { object-position: center 15%; }
+  .cohort-photo-shift-mobile img { object-position: center 60%; transform: none; }
+  .cohort-photo-zoom-2023 img { object-position: center 56%; }
+  .cohort-photo-shift-mobile-2025 img { object-position: center 60%; }
   .member-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .board-photo { height: auto; min-height: 0; max-height: none; }
-  .board-photo { display: block; visibility: visible; }
+  .board-photo { display: block !important; visibility: visible !important; opacity: 1 !important; transform: none !important; }
   .board-roles > div { grid-template-columns: 1fr; gap: .45rem; }
   .board .section-heading { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
   .board-quote { margin-bottom: 1rem; font-size: 1.35rem; text-align: left; }
