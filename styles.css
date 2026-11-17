@@ -238,16 +238,11 @@ em { color: var(--blue); font-family: Georgia, 'Times New Roman', serif; font-we
 .alumni-list p { break-inside: avoid; margin: 0 0 .9rem; line-height: 1.6; }
 
 .memories.section-pad { padding-block: 1cm; background: var(--paper); }
-.memories .section-heading { grid-template-columns: .45fr 1.55fr; }
+.memories .section-heading { grid-template-columns: .45fr 1.55fr; margin-bottom: 1cm; }
 .memory-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 3vw, 2.5rem); align-items: stretch; }
 .memory-card { height: 100%; padding: clamp(1.6rem, 3.5vw, 3.5rem); border: 2px solid var(--blue); border-radius: var(--radius); color: var(--ink); background: var(--paper); }
 .memory-photo { position: relative; width: 100%; aspect-ratio: 1.32; margin-bottom: 1.75rem; overflow: hidden; border-radius: calc(var(--radius) * .75); background: var(--paper); }
-.memory-photo img { position: relative; z-index: 1; width: 200%; max-width: none; height: 100%; object-fit: cover; }
-.memory-photo-myrna img { object-position: left center; transform: scale(.92); transform-origin: left center; }
-.memory-photo-bianca img { margin-left: -100%; object-position: right center; transform: scale(.92); transform-origin: right center; }
-.memory-photo-myrna::after, .memory-photo-bianca::after { content: ''; position: absolute; z-index: 2; inset-block: 0; width: 10%; background: var(--paper); }
-.memory-photo-myrna::after { right: 0; }
-.memory-photo-bianca::after { left: 0; }
+.memory-photo img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: cover; }
 .memory-card p { line-height: 1.75; }
 
 .contact { color: white; background: var(--ink); }
