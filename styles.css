@@ -400,8 +400,14 @@ em { color: var(--blue); font-family: Georgia, 'Times New Roman', serif; font-we
   .alumni-column { display: contents; }
   .alumni-photo { order: -2; display: block !important; height: min(62vw, 250px); margin-bottom: .55rem; visibility: visible !important; opacity: 1 !important; transform: none !important; }
   .alumni-photo img { transform: translateY(-.5cm); }
-  .alumni-column h3 { order: -1; margin-bottom: .55rem; white-space: normal; }
-  .alumni-column p { margin: 0 0 .42rem; line-height: 1.38; }
+  .alumni-column h3 {
+    order: -1;
+    margin-bottom: .55rem;
+    font-size: clamp(1.18rem, 5.4vw, 1.45rem);
+    line-height: 1.12;
+    white-space: normal;
+  }
+  .alumni-column p { margin: 0 0 .24rem; line-height: 1.28; }
   .lustrum-grid { grid-template-columns: 1fr; }
   .lustrum-card-with-image { grid-template-columns: 1fr; }
   .lustrum-card-with-image .lustrum-image { width: min(100%, 240px); justify-self: center; }
