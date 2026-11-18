@@ -227,7 +227,7 @@ em { color: var(--blue); font-family: Georgia, 'Times New Roman', serif; font-we
 .activity-card { display: grid; grid-template-columns: minmax(280px, .85fr) 1.15fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; margin-top: 1.2rem; padding: clamp(1.2rem, 2.5vw, 2.5rem); overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); }
 .activity-card img { width: 100%; height: clamp(320px, 32vw, 460px); object-fit: cover; border-radius: var(--radius); }
 .activity-image { width: 100%; height: clamp(320px, 32vw, 460px); overflow: hidden; border-radius: var(--radius); }
-.activity-image-kater { height: auto; aspect-ratio: 1297 / 1477; }
+.activity-image-kater { height: clamp(320px, 32vw, 460px); aspect-ratio: auto; }
 .activity-image-kater img { width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 0; }
 .activity-card p { margin-bottom: 0; }
 .activity-card-featured img { object-position: center 65%; }
@@ -242,7 +242,7 @@ em { color: var(--blue); font-family: Georgia, 'Times New Roman', serif; font-we
 .alumni-column { min-width: 0; display: flex; flex-direction: column; justify-content: flex-start; gap: .72rem; }
 .alumni-column p { margin: 0; line-height: 1.5; }
 .alumni-photo { width: 100%; height: clamp(230px, 18vw, 252px); margin: 0 0 .35rem; overflow: hidden; border: 2px solid var(--blue); border-radius: var(--radius); background: var(--paper); }
-.alumni-photo img { width: 100%; height: calc(100% + 1cm); object-fit: cover; object-position: center; filter: brightness(.82) contrast(1.04) saturate(.92); transform: translateY(-.5cm); }
+.alumni-photo img { width: 100%; height: calc(100% + 1cm); object-fit: cover; object-position: center; filter: brightness(.82) contrast(1.04) saturate(.92); transform: translateY(0); }
 .alumni-column h3 { margin: 0 0 .45rem; color: var(--ink); font-size: clamp(.68rem, 1.55vw, 2rem); font-weight: 800; letter-spacing: -.03em; white-space: nowrap; }
 
 .memories.section-pad { padding-block: 1cm; background: var(--paper); }
@@ -385,6 +385,7 @@ em { color: var(--blue); font-family: Georgia, 'Times New Roman', serif; font-we
   .alumni-body { display: flex; flex-direction: column; gap: 0; }
   .alumni-column { display: contents; }
   .alumni-photo { order: -2; display: block !important; height: min(62vw, 250px); margin-bottom: .55rem; visibility: visible !important; opacity: 1 !important; transform: none !important; }
+  .alumni-photo img { transform: translateY(-.5cm); }
   .alumni-column h3 { order: -1; margin-bottom: .55rem; white-space: normal; }
   .alumni-column p { margin: 0 0 .42rem; line-height: 1.38; }
   .lustrum-grid { grid-template-columns: 1fr; }
