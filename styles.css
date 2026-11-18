@@ -228,7 +228,7 @@ em { color: var(--blue); font-family: Georgia, 'Times New Roman', serif; font-we
 .activity-card img { width: 100%; height: clamp(320px, 32vw, 460px); object-fit: cover; border-radius: var(--radius); }
 .activity-image { width: 100%; height: clamp(320px, 32vw, 460px); overflow: hidden; border-radius: var(--radius); }
 .activity-image-kater { height: clamp(320px, 32vw, 460px); aspect-ratio: auto; }
-.activity-image-kater img { width: 100%; height: 100%; object-fit: cover; object-position: center; border-radius: 0; }
+.activity-image-kater img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; border-radius: 0; }
 .activity-card p { margin-bottom: 0; }
 .activity-card-featured img { object-position: center 65%; }
 .activities > .activity-card:nth-of-type(even) img { order: 2; }
