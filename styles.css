@@ -281,8 +281,8 @@ em { color: var(--blue); font-family: Georgia, 'Times New Roman', serif; font-we
 .instagram-heading .eyebrow, .instagram-heading em { color: var(--pink); }
 .instagram-heading .button-outline { flex: 0 0 auto; border-color: white; }
 .instagram-heading .button-outline:hover { color: var(--ink); background: white; }
-.instagram-live { width: min(100%, 1050px); margin-inline: auto; overflow: hidden; border-radius: var(--radius); background: white; }
-.instagram-live iframe { display: block; width: 100%; height: 880px; border: 0; background: white; }
+.instagram-live { --instagram-header-height: 156px; width: min(100%, 1050px); aspect-ratio: 3 / 2; margin-inline: auto; overflow: hidden; background: transparent; }
+.instagram-live iframe { display: block; width: 100%; height: calc(100% + var(--instagram-header-height)); border: 0; background: transparent; transform: translateY(calc(-1 * var(--instagram-header-height))); }
 
 .site-footer { min-height: 150px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; align-items: center; padding: 2.5rem var(--pad); border-top: 1px solid rgba(255,255,255,.15); color: white; background: var(--ink); font-size: .72rem; letter-spacing: .06em; }
 .site-footer .brand-mark { color: var(--ink); background: var(--white); }
@@ -342,10 +342,16 @@ em { color: var(--blue); font-family: Georgia, 'Times New Roman', serif; font-we
   .activity-image-kater img { object-position: center top; }
 }
 
-@media (min-width: 1600px) {
-  .section-pad > *, .cohorts { max-width: 1480px; }
+@media (min-width: 1440px) {
+  html { font-size: clamp(16px, 1.05vw, 20px); }
+  .section-pad > *, .cohorts { max-width: min(86vw, 1600px); }
+  .activity-card img, .activity-image { height: clamp(460px, 30vw, 600px); }
+  .atmosphere-grid { grid-auto-rows: clamp(420px, 24vw, 520px); }
   .lustrum-card-with-image { grid-template-columns: minmax(180px, .65fr) minmax(0, 1.35fr); }
-  .alumni-body { gap: 3rem; }
+  .alumni-body { gap: clamp(3rem, 4vw, 5rem); }
+  .alumni-column p { font-size: 1rem; line-height: 1.5; }
+  .alumni-photo { height: clamp(280px, 18vw, 360px); }
+  .instagram-live { width: min(100%, 1320px); }
 }
 
 @media (max-width: 640px) {
@@ -432,8 +438,7 @@ em { color: var(--blue); font-family: Georgia, 'Times New Roman', serif; font-we
   .atmosphere-wide { grid-column: 1 / -1; }
   .instagram-heading { align-items: flex-start; flex-direction: column; }
   .instagram-heading .button span { display: none; }
-  .instagram-live { width: 100%; }
-  .instagram-live iframe { height: 420px; }
+  .instagram-live { --instagram-header-height: 145px; width: 100%; }
   .site-footer { grid-template-columns: 1fr; text-align: left; }
   .site-footer > p { text-align: left; }
   .site-footer > div:last-child { justify-content: flex-start; }
