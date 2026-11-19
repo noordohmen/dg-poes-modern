@@ -354,6 +354,26 @@ em { color: var(--blue); font-family: Georgia, 'Times New Roman', serif; font-we
   .instagram-live { width: min(100%, 1320px); }
 }
 
+@media (min-width: 1600px) {
+  .hero-wide { overflow: hidden; background: #152016; }
+  .hero-wide::before {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    inset: -2rem;
+    background: url('./assets/uploads/hero-nieuw.jpg') center 45% / cover no-repeat;
+    filter: blur(18px) brightness(.62);
+    transform: scale(1.04);
+  }
+  .hero-wide img {
+    position: relative;
+    z-index: 1;
+    width: min(82vw, 1536px);
+    margin-inline: auto;
+  }
+  .hero-wide::after { z-index: 2; }
+}
+
 @media (max-width: 640px) {
   :root { --pad: 1.1rem; }
   main, main > section { width: 100%; max-width: 100%; }
